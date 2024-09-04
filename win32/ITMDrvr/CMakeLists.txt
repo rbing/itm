@@ -8,7 +8,6 @@ SET(ITMDRVR_SRC
     Reporting.cpp 
 )
 
-
 add_executable(itmdrvr ${ITMDRVR_SRC})
 target_include_directories(itmdrvr PRIVATE 
     ${itminclude}
@@ -22,7 +21,6 @@ target_link_libraries(itmdrvr itmlib)
 #
 # Use UNICODE in windows
 #
-
 if (WIN32)
   ADD_DEFINITIONS(-DUNICODE)
   ADD_DEFINITIONS(-D_UNICODE)

@@ -70,7 +70,6 @@ install(TARGETS itmlib
     )
 
 # pkg_check_modules()
-
 configure_file(itmlib.pc.in itmlib.pc @ONLY)
 
 install(FILES ${CMAKE_BINARY_DIR}/itmlib.pc DESTINATION ${CMAKE_INSTALL_DATAROOTDIR}/pkgconfig)
