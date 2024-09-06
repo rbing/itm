@@ -52,11 +52,11 @@ set_target_properties(itmlib PROPERTIES PUBLIC_HEADER include/Errors.h)
 set_target_properties(itmlib PROPERTIES PUBLIC_HEADER include/Warnigns.h)
 
 # Only Cmake 3.20+ provides platform independent way to construct paths
-IF (${CMAKE_MAJOR_VERSION}.${CMAKE_MINOR_VERSION} GREATER_EQUAL 3.20)
+IF(${CMAKE_MAJOR_VERSION}.${CMAKE_MINOR_VERSION} GREATER_EQUAL 3.20)
     cmake_path(APPEND itminclude "${CMAKE_SOURCE_DIR}" "include")
-ELSE (${CMAKE_MAJOR_VERSION}.${CMAKE_MINOR_VERSION} GREATER_EQUAL 3.20)
+ELSE(${CMAKE_MAJOR_VERSION}.${CMAKE_MINOR_VERSION} GREATER_EQUAL 3.20)
     set(itminclude "${CMAKE_SOURCE_DIR}/include")
-ENDIF (${CMAKE_MAJOR_VERSION}.${CMAKE_MINOR_VERSION} GREATER_EQUAL 3.20)
+ENDIF(${CMAKE_MAJOR_VERSION}.${CMAKE_MINOR_VERSION} GREATER_EQUAL 3.20)
 
 #
 # inclue the include directory
@@ -67,7 +67,7 @@ include(GNUInstallDirs)
 install(TARGETS itmlib
     LIBRARY DESTINATION ${CMAKE_INSTALL_LIBDIR}
     PUBLIC_HEADER DESTINATION ${CMAKE_INSTALL_INCLUDEDIR}/itmlib
-    )
+)
 
 # pkg_check_modules()
 configure_file(itmlib.pc.in itmlib.pc @ONLY)
@@ -75,3 +75,4 @@ configure_file(itmlib.pc.in itmlib.pc @ONLY)
 install(FILES ${CMAKE_BINARY_DIR}/itmlib.pc DESTINATION ${CMAKE_INSTALL_DATAROOTDIR}/pkgconfig)
 
 add_subdirectory(win32/ITMDrvr)
+add_subdirectory(service)
