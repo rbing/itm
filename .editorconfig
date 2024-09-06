@@ -1,0 +1,26 @@
+# EditorConfig is awesome: https://EditorConfig.org
+
+# top-most EditorConfig file
+root = true
+
+[*]
+indent_style = space
+indent_size = 2
+end_of_line = lf
+charset = utf-8
+trim_trailing_whitespace = false
+insert_final_newline = false
+
+# Tab indentation (no size specified)
+[Makefile]
+indent_style = tab
+
+[*.{c++,cc,cpp,cxx,h,h++,hh,hpp,hxx,inl,ipp,tlh,tli}]
+cpp_indent_case_contents_when_block = true
+cpp_new_line_before_open_brace_block = next_line
+cpp_new_line_before_open_brace_namespace = next_line
+cpp_namespace_declaration_braces = next_line
+cpp_brace_style = next_line
+namespace_declaration_braces = next_line
+cpp_namespace_declaration_braces = next_line
+cpp_export_declaration_braces = next_line
